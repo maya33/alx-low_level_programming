@@ -1,6 +1,5 @@
-#include <stdio.h>
 #include "main.h"
-#include "Jeremiah.h"
+
 /**
  * main - Entry point
  * Return: Always 0
