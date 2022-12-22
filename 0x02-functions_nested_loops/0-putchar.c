@@ -1,19 +1,20 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * main - print _putchar
+ * is writen by Jeremiah
  * Return: Always 0
  */
 int main(void)
 {
-	_putchar('J');
-	_putchar('e');
-	_putchar('r');
-	_putchar('e');
-	_putchar('m');
-	_putchar('i');
-	_putchar('a');
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
 	_putchar('h');
+	_putchar('a');
+	_putchar('r');
 	_putchar('\n');
 	return (0);
 }
