@@ -1,8 +1,3 @@
-/*
- * Title: 9-print_comb.c
- * Owner: Jeremiah Peter
- */
-
 #include <stdio.h>
 
 /**
