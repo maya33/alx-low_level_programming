@@ -1,30 +1,17 @@
+#include "main.h"
+
 /**
- * C program to check whether a character is uppercase or lowercase 
+ * print_alphabet_x10 - Prints 10 times the alphabet, in lowercase.
  */
-
-#include <stdio.h>
-
-int main()
+void print_alphabet_x10(void)
 {
-    char ch;
+	int count = 0;
+	char letter;
 
-    /* Input character from user */
-    printf("Enter any character: ");
-    scanf("%c", &ch);
-
-
-    if(ch >= 'A' && ch <= 'Z')
-    {
-        printf("'%c' is uppercase alphabet.", ch);
-    }
-    else if(ch >= 'a' && ch <= 'z')
-    {
-        printf("'%c' is lowercase alphabet.", ch);
-    }
-    else
-    {
-        printf("'%c' is not an alphabet.", ch);
-    }
-
-    return 0;
+	while (count++ <= 9)
+	{
+		for (letter = 'a'; letter <= 'z'; letter++)
+			_putchar(letter);
+		_putchar('\n');
+	}
 }
