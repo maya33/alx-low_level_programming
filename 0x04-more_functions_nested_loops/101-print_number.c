@@ -3,19 +3,23 @@
 /**
  * main - check the code
  *
- * Return: Always 0.
+ * Return: void.
  */
-int main(void)
+
+void print_number(int n)
 {
-    print_number(98);
-    _putchar('\n');
-    print_number(402);
-    _putchar('\n');
-    print_number(1024);
-    _putchar('\n');
-    print_number(0);
-    _putchar('\n');
-    print_number(-98);
-    _putchar('\n');
-    return (0);
+	unsigned int m;
+
+	if (n < 0)
+	{
+	_putchar('-');
+m = -n;
+	}
+	else
+	{
+		m = n;
+	}
+	if (m / 10 != 0)
+		print_number(m / 10);
+	_putchar((m % 10) + '0');
 }
