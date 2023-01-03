@@ -1,20 +1,27 @@
 #include "main.h"
-/**
- * print number of integers
- *
- * all integers to be printed
- *
- */
-void print_number(int n)
+#include <stdio.h>
+#include <stdlib.h>
+
+void printnumber(int n)
 {
-	unsigned int num = n;
 
-	if (n < 0)
-	{
-		_putchar('-');
-		num = -num;
-	}
+   if (n < 0) {
+       putchar('-');
+       n = -n;
+   }
 
-	if ((num / 10) > 0)
-		print_number(num / 10);
+   if (n == 0)
+      putchar('0');
+
+   if (n/10)
+      printnumber(n/10);
+
+   putchar(n%10 + '0');
+}
+
+int main(int argc, char** argv)
+{
+   int n = atoi(argv[1]);
+   printnumber(n);
+   printf("\n");
 }
