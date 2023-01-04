@@ -22,6 +22,12 @@ int find_sqrt(int num, int root)
 	return (find_sqrt(num, root + 1));
 }
 
+/**
+ * squareroot - checks if perfect square
+ * @n: input
+ * @i: counter
+ * Return: if square root
+ */
 
 int _sqrt_recursion(int n)
 {
