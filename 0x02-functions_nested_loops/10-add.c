@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * add - a function that adds two integers and return the result
@@ -7,7 +8,10 @@
  * Return: first_num + second_num
  */
 
-int add(int first_num, int second_num)
+int main()
 {
-	return (first_num + second_num);
+	int a = 67, b = 54, add;
+	add = a+b;
+	printf("%d", add);
+	return 0;
 }
