@@ -1,15 +1,26 @@
+#include "main.h"
 #include <stdio.h>
-int main() {   
-    int number;
-   
-    printf("Enter an integer: ");  
-    
-    // reads and stores input
-    scanf("%d", &number);
+/**
+ * main - check the code
+ *
+ * Return: void.
+ */
 
-    // displays output
-    printf("You entered: %d", number);
-    
-    return 0;
+void print_number(int n)
+{
+unsigned int m;
+
+if (n < 0)
+{
+_putchar('-');
+m = -n;
+}
+else
+{
+m = n;
+}
+if (m / 10 != 0)
+print_number(m / 10);
+_putchar((m % 10) + '0');
 }
 
