@@ -1,11 +1,8 @@
-#include 'main.h'
+#ifndef MAIN_H
+#define MAIN_H
 
-/**
- * main - check the code
- * Return: Always 0.
- */
-int main(void)
-{
-	print_alphabet_x10();
-	return (0);
-}
+#include <stdio.h>
+
+void positive_or_negative(int i);
+
+#endif /* MAIN_H */
