@@ -1,17 +1,18 @@
-#include<stdio.h>
-#include<ctype.h>
+#include "main.h"
 
-int main()
+/**
+ * _puts_recursion - function like puts();
+ * 
+ * Return: Always 0 (Success)
+ */
+void _puts_recursion(char *s)
 {
-	int ctr=0;
-	char str[]="The function that prints a string \n followed by a new line \n 0-puts_recursion.c. \n";	
-	printf("\n Task number one 0-puts_recursion.c :\n");  
-    printf("----------------------------------------------------\n");	
-	while (isprint(str[ctr]))
+	if (*s == '\0')
+		_putchar('\n');
+	else
 	{
-		putchar (str[ctr]);
-		ctr++;
+		_putchar(*s);
+		_puts_recursion(s + 1);
 	}
-	printf("\n\n");
-	return 0;
 }
+
