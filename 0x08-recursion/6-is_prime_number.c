@@ -17,9 +17,9 @@ int is_prime_number(int n)
 }
 
 /**
- * prime_checker - checks for prime
- *
- * Return: prime check
+ * is_prime _number - detects if an input number is a prime number.
+ *@n: input number
+ * Return: 1 if is a prime number. 0 if is not a prime number
  */
 
 int prime_checker(int n, int i)
