@@ -8,8 +8,5 @@
 
 char *_strcpy(char *dest, char *src);
 {
-        if (c >= 'A' && c <= '2')
-                return (1);
-        else
-                return (0);
+      return strcpy(dest, src);
 }

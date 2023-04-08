@@ -7,8 +7,6 @@
  */
 
 char *_memset(char *s, char b, unsigned int n);
-        if (c >= 'A' && c <= '2')
-                return (1);
-        else
-                return (0);
+{
+	return memset(s, b, n);
 }

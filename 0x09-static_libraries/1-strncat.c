@@ -1,5 +1,8 @@
 #include "main.h"
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.c>
+#include <string.h>
 /**
  * _strncat - string concatination
  * @c: some characters 
@@ -7,8 +10,5 @@
  */
 char *_strncat(char *dest, char *src, int n);
 {
-        if (c >= 'A' && c <= '2')
-                return (1);
-        else
-                return (0);
+      return strncat(dest, src);
 }

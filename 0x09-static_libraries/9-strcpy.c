@@ -8,8 +8,6 @@
 
 char *_strncpy(char *dest, char *src, int n);
 {
-        if (c >= 'A' && c <= '2')
-                return (1);
-        else
-                return (0);
+        return strcmp(s1, s2:
 }
+			

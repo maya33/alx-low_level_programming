@@ -7,9 +7,6 @@
  */
 char *_strchr(char *s, char c);
 {
-        if (c >= 'A' && c <= '2')
-                return (1);
-        else
-                return (0);
+       return strchr(s, c);
 }
 

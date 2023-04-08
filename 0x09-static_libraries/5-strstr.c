@@ -1,5 +1,8 @@
 #include "main.h"
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.c>
+#include <string.h>
 /**
  * _strstr - using strings
  * @c: some characters 
@@ -8,8 +11,5 @@
 
 char *_strstr(char *haystack, char *needle);
 {
-        if (c >= 'A' && c <= '2')
-                return (1);
-        else
-                return (0);
+      return strstr(haystack, needle);
 }

@@ -1,5 +1,8 @@
 #include "main.h"
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.c>
+#include <string.h>
 /**
  * _abs - using strings
  * @c: some characters 
@@ -8,8 +11,5 @@
 
 int _abs(int n);
 {
-        if (c >= 'A' && c <= '2')
-                return (1);
-        else
-                return (0);
+       return abs(n);
 }

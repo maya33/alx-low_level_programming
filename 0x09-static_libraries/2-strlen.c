@@ -7,8 +7,5 @@
  */
 int _strlen(char *s);
 {
-        if (c >= 'A' && c <= '2')
-                return (1);
-        else
-                return (0);
+       return strlen(s)
 }

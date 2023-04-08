@@ -6,10 +6,8 @@
  * Return: 0 or 1
  */
 
-char *_strcat(char *dest, char *src);
+char *_strcat(char *dest, char *src)
 {
-        if (c >= 'A' && c <= '2')
-                return (1);
-        else
-                return (0);
+	return strcat(dest, src);
 }
+
