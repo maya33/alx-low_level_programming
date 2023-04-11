@@ -3,27 +3,26 @@
 #include <stdlib.h>
 
 /**
- * function that creates an array of chars, and initializes it with a specific char
- * @buffer: memory waiting to be allocated
- * @size: the size of the memory allocation
- *
- * Return: 0
+ * create_array - from a strting point
+ *@size: size of the array
+ *@c: character
+ * Return: a pointer to the array, or NULL if it fails
  */
 char *create_array(unsigned int size, char c)
 {
-  unsigned int i;
-  char *buffer;
+	char *array = NULL;
+	unsigned int i;
 
-  if (size == 0)
-      return (NULL);
-
-/** Defining values with mallco */
-
-  char *s = (char*)malloc(size * sizeof(char));
-
-  for (i = 0; i < size; i++)
-    s[i] = c;
-
-  return (s);
+	if (size == 0)
+		return (NULL);
+	if (size != 0)
+	{
+		array = (char *)malloc(size * sizeof(char));
+		if (array != NULL)
+		{
+			for (i = 0; i < size; i++)
+				array[i] = c;
+		}
+	}
+	return (array);
 }
-
