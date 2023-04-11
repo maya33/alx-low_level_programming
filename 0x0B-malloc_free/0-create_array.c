@@ -6,18 +6,24 @@
  * function that creates an array of chars, and initializes it with a specific char
  * @buffer: memory waiting to be allocated
  * @size: the size of the memory allocation
+ *
  * Return: 0
  */
-char *create_array(unsigned int size, char c);
+char *create_array(unsigned int size, char c)
 {
-	char *str;
-	unsigned int i;
-	str = malloc(sizeof(char) * size);
-	if (size == 0 || str == NULL)
-		return (null);
+  unsigned int i;
+  char *buffer;
 
-	for (i = 0; i < size; i++)
-		str[i] = c;
-	return (str);
+  if (size == 0)
+      return (NULL);
+
+/** Defining values with mallco */
+
+  char *s = (char*)malloc(size * sizeof(char));
+
+  for (i = 0; i < size; i++)
+    s[i] = c;
+
+  return (s);
 }
 
