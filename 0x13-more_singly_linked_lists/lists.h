@@ -1,3 +1,6 @@
+#ifndef LISTS_H
+#define LISTS_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -8,12 +11,12 @@
  * @next: points to the next node
  *
  * Description: singly linked list node structure
- * 
+ * for Holberton project
  */
 typedef struct listint_s
 {
-        int n;
-        struct listint_s *next;
+	int n;
+	struct listint_s *next;
 } listint_t;
 
 size_t print_listint(const listint_t *h);
@@ -30,4 +33,4 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index);
 size_t print_listint_safe(const listint_t *head);
 listint_t *reverse_listint(listint_t **head);
 
-#endif
+#endif /*LISTS_H*/
