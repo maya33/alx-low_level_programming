@@ -1,1 +1,1 @@
-This is a project about 0x12-singly_linked_lists, A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. The elements in a linked list are linked using pointers
+0x12-singly_linked_lists
