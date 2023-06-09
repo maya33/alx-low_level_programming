@@ -1,12 +1,7 @@
-touch 100-change.c 4-add.c 3-mul.c 2-rgs.c 1-args.c 0-whatsmyname.c
-
-
-chmod u+x 100-change.c 4-add.c 3-mul.c 2-rgs.c 1-args.c 0-whatsmyname.c
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "main.h"
 #include <ctype.h>
 
 /**
