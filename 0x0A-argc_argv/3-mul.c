@@ -3,25 +3,30 @@
 #include "main.h"
 
 /**
- * main -  program that multiplies two numbers
- * @argc: number of argument counter
- * @argv: number of argument vector
- * Return: 1 if not enough arguments 
+ * main - a program that multiplies two numbers.
+ * @argc: Number of command line arguments
+ * @argv: Array name
+ * Return: 1
  */
+
 int main(int argc, char *argv[])
 {
-	int a, b;
+	int i, j;
+
 	if (argc == 1 || argc == 2)
 	{
-		printf("error\n");
+		printf("Error\n");
 		return (1);
 	}
 	else
 	{
-		b = 1;
-		for (a = 1, b < 3; a++)
-			b *= atoi(argv[a]);
-		printf("%d\n", b);
+		j = 1;
+
+		for (i = 1; i < 3; i++)
+			j *= atoi(argv[i]);
+
+		printf("%d\n", j);
 	}
+
 	return (0);
 }
