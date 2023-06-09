@@ -1,41 +1,43 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "main.h"
 #include <ctype.h>
+#include "mainn.h"
 
 /**
- * main -  program that adds positive numbers
- * @argc: number of argument counters
- * @argv: argument vector
- * Return: 1 if a non integer is among the passed arguments
- */
+ * main - a program that adds positive numbers
+ * @argc: Number of command line arguments
+ * @argv: Array name
+ * Return: 1 
 
 int main(int argc, char *argv[])
 {
-        int c, d, length, sum;
-        char *ptr;
-        if (argc < 2)
-                printf("0\n");
-        else
-        {
-                sum = 0;
-                for (c = 1; c < argc; c++)
-                {
-                        ptr = argv[c];
-                        length = strlen(ptr);
+	int i, j, length, sum;
+	char *ptr;
 
-                        for (c = 0; d < length; d++)
-                        {
-                                if (isdigit(*(ptr + d)) == 0)
-                                {
-                                        printf("this is a problem\n");
+	if (argc < 2)
+		printf("0\n");
+	else
+	{
+		sum = 0;
+		for (i = 1; i < argc; i++)
+		{
+			ptr = argv[i];
+			length = strlen(ptr);
+
+			for (j = 0; j < length; j++)
+			{
+				if (isdigit(*(ptr + j)) == 0)
+				{
+					printf("Error\n");
 					return (1);
 				}
 			}
-			sum += atoi(argv[]);
+
+			sum += atoi(argv[i]);
 		}
-		printf("%d\n", sum);
+
+	printf("%d\n", sum);
 	}
 	return (0);
 }
