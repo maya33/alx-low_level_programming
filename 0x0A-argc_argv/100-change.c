@@ -2,9 +2,10 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <stdbool.h>
+#include "main.h"
 
 /**
- * main -  program that prints the minimum number of coins to make change for an amount of money
+ * main -  program that prints the minimum number
  * @i: if the number of arguments passed to your program is not exactly 1
  * Return: print Error, followed by a new line, and return
  */
