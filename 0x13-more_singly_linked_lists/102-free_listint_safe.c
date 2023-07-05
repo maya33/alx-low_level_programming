@@ -1,41 +1,53 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 #include "lists.h"
 
 /**
- * free_listint_safe - frees a list (safe version)
- * @h: linked list of type listint_t
+ * main - check the code
  *
- * Return: number of nodes in freed list
+ * Return: Always 0.
  */
-
-size_t free_listint_safe(listint_t **h)
+int main(void)
 {
-	listint_t *current, *runner, *head;
-	size_t h_i, r_i;
+    listint_t *head;
+    listint_t *head2;
+    listint_t *node;
 
-	if (h == NULL || *h == NULL)
-		return (0);
-
-	current = *h;
-	head = *h;
-	h_i = 0;
-
-	while (head != NULL)
-	{
-		runner = *h;
-		for (r_i = 0; r_i < h_i; r_i++)
-		{
-			if (runner == current)
-			{
-				*h = NULL;
-				return (h_i);
-			}
-			runner = runner->next;
-		}
-		current = head->next;
-		free(head);
-		head = current;
-		h_i++;
-	}
-	*h = NULL;
-	return (h_i);
+    head2 = NULL;
+    add_nodeint(&head2, 0);
+    add_nodeint(&head2, 1);
+    add_nodeint(&head2, 2);
+    add_nodeint(&head2, 3);
+    add_nodeint(&head2, 4);
+    add_nodeint(&head2, 98);
+    add_nodeint(&head2, 402);
+    add_nodeint(&head2, 1024);
+    print_listint_safe(head2);
+    node = find_listint_loop(head2);
+    if (node != NULL)
+    {
+        printf("Loop starts at [%p] %d\n", (void *)node, node->n);
+    }
+    free_listint_safe(&head2);
+    head = NULL;
+    node = add_nodeint(&head, 0);
+    add_nodeint(&head, 1);
+    add_nodeint(&head, 2);
+    add_nodeint(&head, 3);
+    add_nodeint(&head, 4);
+    add_nodeint(&head, 5);
+    add_nodeint(&head, 6);
+    node->next = add_nodeint(&head, 7);
+    add_nodeint(&head, 98);
+    add_nodeint(&head, 402);
+    add_nodeint(&head, 1024);
+    print_listint_safe(head);
+    node = find_listint_loop(head);
+    if (node != NULL)
+    {
+        printf("Loop starts at [%p] %d\n", (void *)node, node->n);
+    }
+    free_listint_safe(&head);
+    return (0);
 }
